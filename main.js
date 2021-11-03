@@ -4,7 +4,6 @@ import * as THREE from 'three'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
-
 window.addEventListener( 'resize', onWindowResize );
 let width = window.innerWidth;
 let height = window.innerHeight
