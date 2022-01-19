@@ -114,12 +114,20 @@ function moveCamera() {
   camera.position.z = cameraPercentage;
 
   if (camera.position.z >= 50 && camera.position.z <= 91 && camera.position.y >= -11.40 && bufferValue > document.body.getBoundingClientRect().top) {
-    camera.position.y += -0.3
-    bufferValue = document.body.getBoundingClientRect().top;
+    if(camera.position.y -0.3 < -11.699999999999992 ){
+      return
+    }else{
+      camera.position.y += -0.3
+      bufferValue = document.body.getBoundingClientRect().top;
+    }
   }
   if (camera.position.z >= 50 && camera.position.z <= 80 && bufferValue < document.body.getBoundingClientRect().top) {
-    camera.position.y += 0.3
-    bufferValue = document.body.getBoundingClientRect().top;
+    if(camera.position.y + 0.3 > 0){
+      return
+    }else{
+      camera.position.y += 0.3
+      bufferValue = document.body.getBoundingClientRect().top;
+    }
   }
   if (camera.position.z < 44) {
     camera.position.y = 0
