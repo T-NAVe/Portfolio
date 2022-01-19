@@ -1,14 +1,12 @@
 import './style.css'
 
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 window.addEventListener('resize', onWindowResize);
 let width = window.innerWidth;
 let height = window.innerHeight
 let bufferValue = 8;
-let bufferValue2 = 8;
 // to start we will allways need 3 objects
 // Scene, Camera and Renderer
 
@@ -70,16 +68,6 @@ directionalLight.position.setX(8)
 scene.add(pointLight, pointLight1, pointLight2, ambientLight, directionalLight);
 
 
-const lightHelper = new THREE.PointLightHelper(pointLight);
-const lightHelper1 = new THREE.PointLightHelper(pointLight1);
-const lightHelper2 = new THREE.PointLightHelper(pointLight2);
-const lightHelper3 = new THREE.PointLightHelper(directionalLight);
-const gridHelper = new THREE.GridHelper(200, 50);
-//scene.add(lightHelper,lightHelper1 ,lightHelper2, gridHelper,lightHelper3);
-
-//add controls for better development
-const controls = new OrbitControls(camera, renderer.domElement);
-
 //background
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture
@@ -104,8 +92,6 @@ function animate() {
   requestAnimationFrame(animate);
   avatar.rotation.y += 0.003
 
-  controls.update()
-
   renderer.render(scene, camera)
 }
 animate()
@@ -122,8 +108,10 @@ function onWindowResize() {
 
 }
 function moveCamera() {
-  const top = document.body.getBoundingClientRect().top;
-  camera.position.z = 10 + (top * -0.055)
+
+  const scrollPercentage = (window.scrollY * 100 / (document.querySelector('main').clientHeight - window.innerHeight))/100
+  const cameraPercentage = 354 * scrollPercentage + 8; //max position * percentage + min position.
+  camera.position.z = cameraPercentage;
 
   if (camera.position.z >= 50 && camera.position.z <= 91 && camera.position.y >= -11.40 && bufferValue > document.body.getBoundingClientRect().top) {
     camera.position.y += -0.3
@@ -140,6 +128,8 @@ function moveCamera() {
     camera.position.y = -11.699999999999992
   }
 }
+
+
 document.getElementById('body').onscroll = () => {
   moveCamera()
 };
