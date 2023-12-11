@@ -4,11 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, max-snippet:50, max-image-preview:large" />
+    <meta name="description" content="Luca de Acha's portfolio" />
+    <meta name="author" content="Luca de Acha" />
+    <meta name="keywords" content="Luca de Acha, Luca, de, Acha, portfolio, web, developer, full-stack, full, stack, fullstack, javascript, react, node, express, mongodb, html, css">
+    <link rel="stylesheet" href="./style.css" />
     <title>Luca de Acha</title>
   </head>
-  <body id="body">
-    <canvas id="bg"></canvas>
-    <div class="loading"><h1>Loading</h1></div>
+  <body id="body" class="body">
+    <!-- preload of doomimages -->
+    <img src="/Doom01.png" alt="" style="display: none" />
+    <img src="/Doom02.png" alt="" style="display: none" />
+    <img src="/Doom03.png" alt="" style="display: none" />
+    <img src="/Doom04.png" alt="" style="display: none" />
+    <img src="/Doom05.png" alt="" style="display: none" />
+    <canvas class="bg" id="bg"></canvas>
+    <div class="loading">
+      <canvas width="24" height="29" class="doom" id="doom"></canvas>
+      <div class="health-bar" data-total="1000" data-value="1000">
+        <div class="bar">
+        </div>
+      </div>
+    </div>
     <main>
 
       <header>
@@ -18,140 +34,243 @@
 
 
       <blockquote>
-        <p>I like making stuff that are outside of my skill set until they become part of my skill set</p>
+        <p>I like making stuff that is outside of my skill set until they become part of my skill set</p>
       </blockquote>
 
       <section>
         <h2>📜 About</h2>
         <p>
-          I'm a self-taught full-stack developer looking to insert myself into the IT bussines, with the objective to obtain new knowledge, to improve the ones i already have and to contribute with the company success.
+          Hello! I'm a self-taught web developer, with a focus in React. My goal? Continuously learning, refining my skills, contributing meaningfully, taking ownership of projects, and have a great time on doing so. Let's connect and discuss how I can bring significant value to the team!
         </p>
-        <a href="https://www.linkedin.com/in/luca-de-acha/" target="_blank" rel="noopener noreferrer" >
-          <img class="icon" src="linkedin.svg">
-        </a>
+        <span class="icon-box">
+          <a href="https://www.linkedin.com/in/luca-de-acha/" target="_blank" rel="noopener noreferrer" >
+            <img width="30" height="30" class="icon" src="linkedin.svg">
+          </a>
+          <a href="mailto:lucadeacha@gmail.com">
+            <img width="30" height="30" class="icon" src="./mail.svg">
+          </a>
+        </span>
+      </section>
+
+      
+      <section class="right">
+        <h2>🧰 Work History</h2>
+
+        <article>
+          <div class="job-title-box">
+            <span class="flex-row">
+              <a href="https://www.linkedin.com/company/culturait/mycompany/" target="_blank" rel="noopener noreferrer">
+                <img style="width: 30; height: 30;" width="30" height="30" class="icon" src="./culturait_logo.jpg">
+              </a>
+              <h3>React developer Ssr | Dev lead</h3>
+            </span>
+            <p>May 2022 - Present</p>
+          </div>
+          <p>
+            Leading small groups of developers, working on a NextJs application.
+          </p>
+          <h3>Responsabilities</h3>
+          <ul>
+              <li>Code Review: Ensure code quality, efficiency, and best practice adherence through thorough reviews.</li>
+              <li>Team Leadership: Lead a small, goal-oriented development team to ensure successful project delivery.</li>
+              <li>Application Development: Contribute significantly to a Next.js application using React expertise.</li>
+              <li>Estimation Skills: Provide accurate time and story point estimates for effective project planning.</li>
+              <li>Goal-Oriented Planning: Contribute to high-level project plans focused on achieving objectives and delivering quality solutions.</li>
+              <li>Analysis and Solution Modeling: Conduct in-depth analysis and contribute to scalable solution modeling for complex requirements.</li>
+              <li>Stack Analysis and Definitions: Assess and define technology stacks for efficient project development.</li>
+            </ul>
+          <h3>Technologies</h3>
+          <div class="pill-box">
+            <p class="pill">
+              HTML/CSS
+            <p class="pill">
+              NodeJs
+            </p>
+            <p class="pill">
+              Angular
+            </p>
+            <p class="pill">
+              React
+            </p>
+            <p class="pill">
+              JavaScript
+            </p>
+            <p class="pill">
+              React Native
+            </p>
+            <p class="pill">
+              NextJs
+            </p>
+            <p class="pill">
+              NextAuth
+            </p>
+            <p class="pill">
+              tailwindcss
+            </p>
+            <p class="pill">
+              RadixUI
+            </p>
+            <p class="pill">
+              MaterialUI
+            </p>
+            <p class="pill">
+              tanstack/react-table
+            </p>
+            <p class="pill">
+              tanstack/react-virtual
+            </p>
+          </div>
+          <hr/>
+        </article>
+
+        <article>
+          <div class="job-title-box">
+            <h3>👨‍💻 Freelance Web Developer</h3>
+            <p>Oct 2019 - May 2022</p>
+          </div>
+          <p>
+            Freelance development of web applications using mostly MERN Stack            
+          </p>
+        </article>
       </section>
 
       <section class="light">
-        <h2>🐱‍👤 Projects</h2>
+          <h2>🐱‍👤 Personal projects</h2>
+        <article>
+          <h3>🧂 SAL</h3>
+          <p>
+            A Chrome Extension to solve a very common problem
+          </p>
+          <a href="https://github.com/T-NAVe/SAL" target="_blank" rel="noopener noreferrer"><p>The GitHub repository</p></a>
+          <p>
+            SAL is a Chrome extension that utilizes a compressor to reduce the dynamic range of audio, providing a smoother experience by leveling the volume across various web videos, from Netflix to YouTube.
+            This eliminates the need for users to manually adjust the volume for a more consistent and enjoyable viewing experience.
+          </p>
+          <p>
+            Is currently in revision by the google team, I will provide a link once it's approved, for now you can download it from the repository, and install it manually.
+            I hope you enjoy it!
+          </p>
+          <hr/>
+        </article>
+        <article>
 
-        <h2>This portfolio!</h2>
-        <p>
-          A Vite/ThreeJS project
-        </p>
-        <p><a href="https://github.com/T-NAVe/Portfolio" target="_blank" rel="noopener noreferrer">The GitHub repository</a></p>
-        <p>
-          This was a very interesting yet simple project to make. <br>
-          The intention behind this project was more on the funside, feel free to use this code as you like, hope you enjoy it. <br>
-        </p>
-        <hr>
-
-        <h2>Instaclone Tnav-e</h2>
-        <p>
-          A MERN Stack Instagram clone
-        </p>
-        <p><a href="http://instaclonetnave.herokuapp.com/" target="_blank" rel="noopener noreferrer">The app</a></p>
-        <p><a href="https://github.com/T-NAVe/instaclonetnave" target="_blank" rel="noopener noreferrer">The GitHub repository</a></p>
-        <p>
-          The free tier heroku service is not the fastest one on the internet, it takes a second to load. <br>
-          This app has email authentication, if you want to try it out without registering, you can use the following user: <br>
-          email: admin@admin.com <br>
-          password: 1234 <br>
-        </p>
-        <hr>
-
-        <h3>Salary Calculator</h3>
-        <p>
-          A PWA React Firebase application
-        </p>
-        <p><a href="https://calculadora-nominal.netlify.app/" target="_blank" rel="noopener noreferrer">The app</a></p>
-        <p><a href="https://github.com/T-NAVe/Calculadora-Nominal" target="_blank" rel="noopener noreferrer">The GitHub repository</a></p>
-        <p>
-          This is a simple salary calculator made in react+firebase, you can authenticate with google and try it out
-        </p>
-        <hr>
-        <h3>BlackLotus</h3>
-        <p>
-          A NodeJS Handlebars application
-        </p>
-        <p><a href="https://blacklotusencryptor.herokuapp.com/" target="_blank" rel="noopener noreferrer">The app</a></p>
-        <p><a href="https://github.com/T-NAVe/BlackLotusl" target="_blank" rel="noopener noreferrer">The GitHub repository</a></p>
-        <p>
-          This is a text encryption web <br>
-          The encryption method is based on the mehod used by Black Lotus Tong on the popular tv series Sherlock
-        </p>
-        <hr>
-        <h3>Teamsticks</h3>
-        <p>
-          A MEAN Stack desktop application
-        </p>
-        <p>
-          The app is focused on retrieving useful information for the Tier 3 competitive esports League of Legends scene. <br>
-          It has been divided into 3 separated apps <br>
-          <p><a href="https://github.com/T-NAVe/Teamsticks-backend" target="_blank" rel="noopener noreferrer">Teamsticks Backend 🐱‍💻</a></p>
-          <p><a href="https://github.com/T-NAVe/Teamsticks-Viewer" target="_blank" rel="noopener noreferrer">Teamsticks Viewer 🐱‍🐉</a></p>
-          <p><a href="https://github.com/T-NAVe/Teamsticks-Client" target="_blank" rel="noopener noreferrer">Teamsticks Client 🐱‍👤</a></p>
-          This is an ElectronJS desktop application, Riot Games changed their Client-API a few months back and it's just back online, i've made the necessary changes for this app to work again.<br>
-          Unfortunately it is hard for you to test it, since you will need to set up the project to your needs.<br>
-          But hey, here are some screenshots!
-        </p>
-        <img class="screenshot" src="screenshot.jpg" alt="">
-        <img class="screenshot" src="screenshot01.jpg" alt="">
-        <img class="screenshot" src="screenshot02.jpg" alt="">
-        <img class="screenshot" src="screenshot03.jpg" alt="">
+          <h3>This portfolio!</h3>
+          <p>
+            A Vite/ThreeJS project
+          </p>
+          <a href="https://github.com/T-NAVe/Portfolio" target="_blank" rel="noopener noreferrer"><p>The GitHub repository</p></a>
+          <p>
+            This was a very interesting yet simple project to make. <br>
+            The intention behind this project was more on the funside, feel free to use this code as you like, hope you enjoy it.
+          </p>
+          <hr/>
+        </article>
+        <article>
+          <h3>Instaclone Tnav-e</h3>
+          <p>
+            A MERN Stack Instagram clone
+          </p>
+          <a href="https://github.com/T-NAVe/instaclonetnave" target="_blank" rel="noopener noreferrer"><p>The GitHub repository</p></a>
+          <strong> No longer online, feel free to browse the code on the repository </strong>
+          <hr>
+        </article>
+        <article>
+          <h3>Salary Calculator</h3>
+          <p>
+            A PWA React Firebase application
+          </p>
+          <a href="https://calculadora-nominal.netlify.app/" target="_blank" rel="noopener noreferrer"><p>The app</p></a>
+          <a href="https://github.com/T-NAVe/Calculadora-Nominal" target="_blank" rel="noopener noreferrer"><p>The GitHub repository</p></a>
+          <p>
+            This is a simple salary calculator made in react+firebase, you can authenticate with google and try it out
+          </p>
+          <hr>
+        </article>
+        <article>
+          <h3>BlackLotus</h3>
+          <p>
+            A NodeJS Handlebars application
+          </p>
+          <a href="https://github.com/T-NAVe/BlackLotusl" target="_blank" rel="noopener noreferrer"><p>The GitHub repository</p></a>
+          <p>This is a text encryption web </p>
+          <p>The encryption method is based on the mehod used by Black Lotus Tong on the popular tv series Sherlock</p>
+          <strong> No longer online, feel free to browse the code on the repository </strong>
+          <hr>
+        </article>
+        <article>
+          <h3>Teamsticks</h3>
+          <p>
+            A MEAN Stack desktop application
+          </p>
+          <p>
+            The app is focused on retrieving useful information for the Tier 3 competitive esports League of Legends scene. <br>
+            It has been divided into 3 separated apps <br>
+            <a href="https://github.com/T-NAVe/Teamsticks-backend" target="_blank" rel="noopener noreferrer"><p>Teamsticks Backend 🐱‍💻</p></a>
+            <a href="https://github.com/T-NAVe/Teamsticks-Viewer" target="_blank" rel="noopener noreferrer"><p>Teamsticks Viewer 🐱‍🐉</p></a>
+            <a href="https://github.com/T-NAVe/Teamsticks-Client" target="_blank" rel="noopener noreferrer"><p>Teamsticks Client 🐱‍👤</p></a>
+            <p>I wish I knew about monorepos back then!</p>
+            This is an ElectronJS desktop application, Riot Games changed their Client-API a few months back and it's just back online, i've made the necessary changes for this app to work again.<br>
+            However, since Tier 3 is no longer a thing and the app is not being used, i've decided to not update it anymore.
+            <p>Feel free to use this code as you like</p>
+          </p>
+          <img class="screenshot" src="screenshot.jpg" alt="">
+          <img class="screenshot" src="screenshot02.jpg" alt="">  
+          <img class="screenshot" src="screenshot03.jpg" alt="">
+        </article>
       </section>
 
 
-      <section class="light">
+      <section class="light  right">
         <h2>🏆 Courses</h2>
 
         <ul>
           <li>
-          JavaScript: Desde Cero con NodeJS (12hs) UDEMY
+          JavaScript: Desde Cero con NodeJS UDEMY
           </li>
           <li>
-          Aprende React + FirebasE (6,5HS) UDEMY
+          Aprende React + FirebasE UDEMY
           </li>
           <li>
-          MERN Stack Master Course (10,5HS) UDEMY
+          MERN Stack Master Course UDEMY
           </li>
           <li>
-          React desde Cero (30,5hs) UDEMY
+          React desde Cero  UDEMY
           </li>
           <li>
-          JavaScript esencial (5,2HS) LinkedIn
+          JavaScript esencial  LinkedIn
           </li>
           <li>
-          Node.js esencial (3,4HS) LINKEDIN
+          Node.js esencial LINKEDIN
           </li>
           <li>
-          Gitlab (1hr) UDEMY
+          Gitlab  UDEMY
           </li>
           <li>
-          Git and Github Beginner to EXPERT (2HS) UDEMY
+          Git and Github Beginner to EXPERT  UDEMY
           </li>
           <li>
-          JavaScript Algorithms and Data Structures (300HS)FREECODECAMP
+          JavaScript Algorithms and Data Structures FREECODECAMP
           </li>
           <li>
-          JavaScript avanzado: Buenas prácticas (1,5HS) LINKEDIN
+          JavaScript avanzado: Buenas prácticas LINKEDIN
           </li>
           <li>
-          Learn Advanced JavaScript (2,5hs) UDEMY
+          Learn Advanced JavaScript UDEMY
           </li>
           <li>
-          Visual Studio Code (3,5hs) UDEMY
+          Visual Studio Code UDEMY
           </li>
           <li>
-          Fundamentos del desarrollo web: Full Stack o Front-end (1HS) LinkedIn
+          Fundamentos del desarrollo web: Full Stack o Front-end  LinkedIn
           </li>
           <li>
-          Master en JavaScript: js, jquery, Angular9, NodeJs (31,5hs)UDEMY
+          Master en JavaScript: js, jquery, Angular9, NodeJs UDEMY
           </li>
           <li>
-          Python 3.x desde 0 a experto (3.5hrs) UDEMY
+          Python 3.x desde 0 a experto UDEMY
           </li>
           <li>
-          JavaScript: Desde cero con NodeJS (12HS) UDEMY
+          JavaScript: Desde cero con NodeJS UDEMY
           </li>
         </ul>
       </section>
@@ -160,19 +279,9 @@
         <p>Any application that can be written in JavaScript, will eventually be written in JavaScript<br>-Atwood’s Law</p>
       </blockquote>
 
-      <section class="left">
-        <h2>🌮 Work History</h2>
-
-        <h3>Web Developer 👨‍💻</h3>
-        <p>
-          Carrying out projects independently for more than 2 years.
-        </p>
-      </section>
-
       <blockquote>
         <p>Thanks for visiting my website!</p>
       </blockquote>
-
 
     </main>
     <script type="module" src="/main.js"></script>
