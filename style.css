@@ -1,10 +1,3 @@
-canvas{
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-
 :root {
   --dark-bg: rgba(15, 15, 15, 0.685);
   --spacing: 300px;
@@ -14,12 +7,50 @@ canvas{
   font-style: normal;
 }
 
+.bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.body {
+  background-color: black;
+  overflow: hidden;
+}
+
+.doom {
+  width:120px;
+  height: 145px;
+  image-rendering: pixelated;
+}
+
 .icon{
   width: 30px;
   height: auto;
 }
 .icon:hover{
   box-shadow: 0px 0px 5px 1px rgb(255 255 255 / 51%);
+}
+
+.icon-box {
+  display: flex;
+  gap: 1rem;
+}
+
+.job-title-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -33,6 +64,7 @@ main {
   left: 0;  
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  visibility: hidden;
 }
 
 
@@ -62,7 +94,7 @@ section {
 
 blockquote {
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   grid-column: 2 / span 9;
   margin-bottom: var(--spacing);
   background-color: rgba(255, 255, 255, 0.795);
@@ -76,9 +108,10 @@ blockquote p {
   line-height: 1;
 }
 
-.left {
+.right {
   grid-column: 6 / 12;
 }
+
 a{
   text-decoration: none; 
   color: aqua;
@@ -86,6 +119,61 @@ a{
 .screenshot{
   width: 400px;
   padding: 1rem;
+}
+
+.pill-box{
+  display: flex;
+  flex-direction: row;
+  gap: 0.1rem 0.3rem;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pill{
+  background-color: rgba(255, 255, 255, 0.795);
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  color: black;
+  text-wrap: nowrap;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s ease-in-out;
+  background: black;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.health-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.bar {
+  background: #c54;
+  width: 0%;
+  height: 10px;
+  position: relative;
+  transition: width .5s linear;
 }
 
 
