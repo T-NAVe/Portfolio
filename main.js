@@ -13,7 +13,6 @@ const $body = document.querySelector("#body")
 const $loading = document.querySelector('.loading')
 const $bar = document.querySelector('.bar')
 const $dooom = document.querySelector("#doom").getContext("2d")
-const $dooomContainer = document.querySelector("#doom")
 const $main = document.querySelector('main')
 
 // TODO: Fix - doesn't work for some reason
