@@ -175,7 +175,7 @@ function moveCamera() {
   camera.position.z = cameraPercentage;
   // this handlers tryes to navigate the camera trough the stairs, that's why it has some hardcoded values
   // This part of the code should be refactored to use camera path that follows a spline or bezier curve or if it remains the same, at least should use percentages instead of fixed values
-  if (camera.position.z >= 60 && camera.position.z <= 101 && camera.position.y >= -11.40 && bufferValue > document.body.getBoundingClientRect().top) {
+  if (camera.position.z >= 52 && camera.position.z <= 68 && camera.position.y >= -11.40 && bufferValue > document.body.getBoundingClientRect().top) {
     if(camera.position.y -0.3 < -11.699999999999992 ){
       return
     }else{
@@ -183,7 +183,7 @@ function moveCamera() {
       bufferValue = document.body.getBoundingClientRect().top;
     }
   }
-  if (camera.position.z >= 60 && camera.position.z <= 90 && bufferValue < document.body.getBoundingClientRect().top) {
+  if (camera.position.z >= 52 && camera.position.z <= 68 && bufferValue < document.body.getBoundingClientRect().top) {
     if(camera.position.y + 0.3 > 0){
       return
     }else{
